@@ -1,0 +1,155 @@
+{
+  "name": "rcu-extension",
+  "displayName": "ZMROBO Russian (Not official)",
+  "description": "Extension providing IntelliSense and commands for ZMROBO",
+  "version": "1.0.1",
+  "publisher": "IofeKirill",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "icon": "icon.png",
+  "activationEvents": [
+    "onLanguage:python"
+  ],
+  "main": "./out/extension.js",
+  "keywords": [
+        "zmrobo",
+        "robots",
+        "python",
+        "rcu"
+    ],
+  "contributes": {
+    "viewsContainers": {
+        "activitybar": [
+            {
+                "id": "rcuSidebar",
+                "title": "ZMROBO Russian (Not official)",
+                "icon": "resources/icons/rcu-icon.png"
+            }
+        ]
+    },
+    "views": {
+      "rcuSidebar": [
+        {
+          "id": "rcuCommands",
+          "name": "RCU Commands"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "extension.createPythonTemplate",
+        "title": "Create Python Template"
+      },
+      {
+        "command": "rcu.setMotor",
+        "title": "Set Motor"
+      },
+      {
+        "command": "rcu.SetMotorCode",
+        "title": "Set Motor Code"
+      },
+      {
+        "command": "rcu.GetMotorCode",
+        "title": "Get Motor Code"
+      },
+      {
+        "command": "rcu.SetWaitForTime",
+        "title": "Set Wait For Time"
+      },
+      {
+        "command": "rcu.SetSysTime",
+        "title": "Set System Time"
+      },
+      {
+        "command": "rcu.GetSysTime",
+        "title": "Get System Time"
+      },
+      {
+        "command": "rcu.GetInVotage",
+        "title": "Get Input Voltage"
+      },
+      {
+        "command": "rcu.Set3CLed",
+        "title": "Set 3C LED"
+      },
+      {
+        "command": "rcu.SetLightSensorLed",
+        "title": "Set Light Sensor LED"
+      },
+      {
+        "command": "rcu.GetLightSensor",
+        "title": "Get Light Sensor"
+      },
+      {
+        "command": "rcu.GetTouch",
+        "title": "Get Touch Sensor"
+      },
+      {
+        "command": "rcu.GetUltrasound",
+        "title": "Get Ultrasound Sensor"
+      },
+      {
+        "command": "rcu.GetLaserDist",
+        "title": "Get Laser Distance Sensor"
+      },
+      {
+        "command": "rcu.GetColorSensor",
+        "title": "Get Color Sensor"
+      },
+      {
+        "command": "rcu.SetAHRS",
+        "title": "Set AHRS"
+      },
+      {
+        "command": "rcu.GetAHRS",
+        "title": "Get AHRS Data"
+      },
+      {
+        "command": "rcu.GetTraceV2I2C",
+        "title": "Get Trace V2 I2C"
+      },
+      {
+        "command": "rcu.SetAICamData",
+        "title": "Set AI Camera Data"
+      },
+      {
+        "command": "rcu.SetWaitForAICamData",
+        "title": "Wait for AI Camera Data"
+      },
+      {
+        "command": "rcu.SetAICamLED",
+        "title": "Set AI Camera LED"
+      },
+      {
+        "command": "rcu.GetAICamData",
+        "title": "Get AI Camera Data"
+      },
+      {
+        "command": "rcu.SetMp3Play",
+        "title": "Play MP3 Sound"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+          {
+              "command": "extension.createPythonTemplate",
+              "group": "2_python"
+          }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "@types/vscode": "^1.60.0",
+    "typescript": "^4.0.0",
+    "vscode-test": "^1.4.0"
+  }
+}
